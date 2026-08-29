@@ -1,0 +1,32 @@
+# Zero Dependency 2026 Hackathon Metadata
+# Official Submission Specification (zerodepshack.com)
+
+[project]
+name = "NovaCPP"
+track = "C"
+track_name = "Web & Network"
+pitch = "A full-stack reactive C++ web framework & HTTP/1.1 server compiling to a single native binary with zero runtime dependencies."
+language = "C++"
+standard = "C++17"
+manifest = "CMakeLists.txt"
+
+[team]
+members = [
+    { name = "Daksh Jain", github = "j08daksh-byte", role = "Core Socket Server, Routing & Build Tooling" },
+    { name = "Anadi Sharma", github = "itsmeanadi", role = "HTML DSL Tree, Reactive State & Memory Optimizations" },
+    { name = "Anurag Yadav", github = "CfRadar", role = "In-Memory DB, Session Auth, Raw Socket Fetch & Test Suite" },
+    { name = "Manasvi Sharma", github = "mnsv1005", role = "Frontend Reactive UI, Glassmorphism Styling & DOM Bridge" }
+]
+
+[bonuses]
+claimed = [
+    "Package Killer (+3) - Replaced cpp-httplib, Boost.Asio, and React/JSX templating with native C++ stdlib & raw OS sockets",
+    "STDLIB Log (+3) - 12 non-trivial package-to-stdlib substitutions documented with rationale in STDLIB.md",
+    "Reproducible Build (+5) - Deterministic build scripts with verified byte-identical SHA-256 binary outputs"
+]
+
+[build]
+command = "nova run"
+test_command = "nova test"
+alt_cmake_command = "cmake -B build && cmake --build build"
+alt_make_command = "make run"
