@@ -232,3 +232,6 @@ Our automated test runner in [`tests/test_main.cpp`](tests/test_main.cpp) proves
 ## 📜 License
 
 Distributed under the [MIT License](LICENSE). Built from first principles for the **Zero Dependency 2026 Hackathon**.
+
+<!-- Hackathon submission build verified -->
+
