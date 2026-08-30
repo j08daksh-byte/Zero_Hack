@@ -161,7 +161,7 @@ docker run -p 8080:8080 novacpp:latest
 
 ---
 
-## 🌟 Hackathon Bonus Points Claimed (+16 Maximum Points)
+## 🌟 Hackathon Bonus Points Claimed (+11 Points)
 
 <details>
 <summary><b>🔍 Click to expand Bonus Points Breakdown</b></summary>
@@ -171,8 +171,7 @@ docker run -p 8080:8080 novacpp:latest
 | :--- | :---: | :--- |
 | **STDLIB Log** | **+3** | Documented **12 comprehensive package-for-stdlib substitutions** with full rationale in [`STDLIB.md`](STDLIB.md). |
 | **Package Killer** | **+3** | Replaced `cpp-httplib`, `Boost.Asio`, and `React/JSX` template engines using pure standard C++ streams and OS socket APIs. |
-| **Reproducible Build** | **+5** | Automated verification script [`reproducible_build.ps1`](reproducible_build.ps1) proving byte-identical SHA-256 binary outputs across runs. |
-| **Zero Runtime Manifest** | **+5** | Manifest contains zero dependencies; verified via `ldd` and `dumpbin` in [`deps-proof.txt`](deps-proof.txt). |
+| **Reproducible Build** | **+5** | Automated verification script [`reproducible_build.ps1`](reproducible_build.ps1) proving deterministic SHA-256 binary outputs across runs. |
 
 </details>
 
@@ -232,6 +231,3 @@ Our automated test runner in [`tests/test_main.cpp`](tests/test_main.cpp) proves
 ## 📜 License
 
 Distributed under the [MIT License](LICENSE). Built from first principles for the **Zero Dependency 2026 Hackathon**.
-
-<!-- Hackathon submission build verified -->
-

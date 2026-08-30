@@ -10,7 +10,7 @@
 ## 🎯 Zero-Dependency Philosophy & Rules Compliance
 
 NovaCPP was engineered strictly from first principles using:
-1. **Standard C++ (C++14 / C++17)** standard library headers (`<iostream>`, `<string>`, `<vector>`, `<sstream>`, `<thread>`, `<mutex>`, `<chrono>`, `<memory>`, `<functional>`, `<unordered_map>`, `<random>`).
+1. **Standard C++ (C++17)** standard library headers (`<iostream>`, `<string>`, `<vector>`, `<sstream>`, `<thread>`, `<mutex>`, `<chrono>`, `<memory>`, `<functional>`, `<unordered_map>`, `<random>`).
 2. **Standard C runtime (`libc`)**.
 3. **Standard OS socket interfaces** (POSIX `sys/socket.h`, `netinet/in.h`, `unistd.h` for Linux/macOS, and `winsock2.h` for Windows).
 

@@ -1,14 +1,16 @@
-NovaCPP Custom License
+MIT License
 
-Copyright (c) 2026, NovaCPP Project
-All rights reserved.
+Copyright (c) 2026 Daksh Jain, Anadi Sharma, Anurag Yadav, Manasvi Sharma
 
-This software is provided "free to use" for any personal or commercial applications built ON TOP OF the NovaCPP framework. You are granted a non-exclusive, royalty-free license to use this framework to develop, build, and deploy your own web applications.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-However, the following restrictions apply:
-1. DO NOT COPY: You may not copy, redistribute, sub-license, or republish the NovaCPP framework source code itself.
-2. NO DERIVATIVE WORKS: You may not modify the framework source code for the purpose of distributing a competing framework or derivative tool.
-3. NO MISREPRESENTATION: You may not claim ownership or authorship of the NovaCPP framework.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
