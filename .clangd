@@ -1,0 +1,6 @@
+CompileFlags:
+  Add:
+    - -std=c++17
+    - -D_WIN32_WINNT=0x0601
+    - -DWIN32_LEAN_AND_MEAN
+    - -I.
