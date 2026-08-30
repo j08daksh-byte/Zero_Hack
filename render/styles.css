@@ -1,3 +1,4 @@
+/* Smooth responsiveness & modern backdrop filters */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -171,3 +172,4 @@ button {
   color: #e5e5ea;
   margin-bottom: auto;
 }
+
