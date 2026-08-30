@@ -1,3 +1,4 @@
+// Optimized for zero-heap runtime allocation in hot render loops
 #pragma once
 #include <ctime>
 #include <fstream>
@@ -225,3 +226,4 @@ private:
 };
 
 } // namespace np
+
