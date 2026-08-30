@@ -5,6 +5,7 @@
 #include "backend/Auth.hpp"
 
 void renderHomePage(np::NovaBuilder &np);
+void renderDocsPage(np::NovaBuilder &np);
 void renderAboutPage(np::NovaBuilder &np);
 
 int main() {
@@ -14,6 +15,7 @@ int main() {
   Auth::initialize();
 
   app.route("/", renderHomePage);
+  app.route("/docs", renderDocsPage);
   app.route("/about", renderAboutPage);
 
   int port = 8080;

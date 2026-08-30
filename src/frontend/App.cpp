@@ -16,9 +16,12 @@ public:
   void render(np::NovaBuilder &np) override {
     np << R"(
       <div class="bento-card col-12 navbar-card">
-        <a href="/" class="nav-link" nova-link>Home</a>
-        <a href="/about" class="nav-link" nova-link>About</a>
-        <div style="margin-left:auto;font-size:0.8rem;color:#86868b;font-weight:600;letter-spacing:1px;">NOVACPP ENGINE</div>
+        <div class="nav-links">
+          <a href="/" class="nav-link" nova-link>Home</a>
+          <a href="/docs" class="nav-link" nova-link>Docs</a>
+          <a href="/about" class="nav-link" nova-link>About</a>
+        </div>
+        <div class="engine-badge">NOVACPP ENGINE</div>
       </div>
     )";
   }
@@ -111,14 +114,17 @@ public:
 
   void render(np::NovaBuilder &np) override {
     np << R"(
-      <div class="bento-card col-12 row-2" style="padding:4rem;justify-content:center;align-items:center;text-align:center;">
-        <h1 style="font-size:3.5rem;margin-bottom:1.5rem;color:#1d1d1f;letter-spacing:-1.5px;font-weight:800;">About NovaCPP</h1>
-        <p style="font-size:1.25rem;line-height:1.8;color:#86868b;max-width:800px;margin-bottom:1.5rem;">
+      <div class="bento-card col-12 about-card">
+        <div class="badge badge-indigo">FRAMEWORK ARCHITECTURE</div>
+        <h1 class="about-title">About NovaCPP</h1>
+        <p class="about-lead">
           NovaCPP brings component-based single page applications to standard C++ without Node.js or third-party web libraries.
         </p>
-        <p style="font-size:1.25rem;line-height:1.8;color:#86868b;max-width:800px;">
-          Features include <strong style="color:#1d1d1f;">Surgical DOM Swapping</strong>, <strong style="color:#1d1d1f;">Thread-Safe State Hooks</strong>, and <strong style="color:#1d1d1f;">Zero Runtime Dependencies</strong>.
-        </p>
+        <div class="about-pills">
+          <span class="about-pill">&#9889; Surgical DOM Swapping</span>
+          <span class="about-pill">&#128274; Thread-Safe State Hooks</span>
+          <span class="about-pill">&#128230; Zero Runtime Dependencies</span>
+        </div>
       </div>
     )";
   }
@@ -188,6 +194,61 @@ void renderHomePage(np::NovaBuilder &np) {
   np.renderComponent(s_feat_state);
   np.renderComponent(s_feat_mono);
   np.renderComponent(s_api);
+  np << R"(</div>)";
+}
+
+class DocsComponent : public np::Component {
+public:
+  DocsComponent() : Component("docs-comp") {}
+
+  void render(np::NovaBuilder &np) override {
+    np << R"(
+      <div class="bento-card col-12 docs-card">
+        <div class="docs-header">
+          <div class="badge badge-indigo">DOCUMENTATION</div>
+          <h2 class="docs-title">NovaCPP API & Quick Start Guide</h2>
+          <p class="docs-desc">
+            Explore the zero-dependency C++ web framework APIs. Build reactive SPAs and HTTP microservices with zero external packages.
+          </p>
+        </div>
+        
+        <div class="docs-grid">
+          <div class="docs-feature-box">
+            <div class="docs-feature-head">&#9889; Server &amp; Routes</div>
+            <code class="docs-code">app.route("/", renderHome);</code>
+            <p class="docs-feature-text">Register declarative page handlers with surgical DOM diffing.</p>
+          </div>
+
+          <div class="docs-feature-box">
+            <div class="docs-feature-head">&#128274; Reactive State</div>
+            <code class="docs-code">np::State&lt;int&gt; count(0);</code>
+            <p class="docs-feature-text">Thread-safe session state hooks with microsecond updates.</p>
+          </div>
+
+          <div class="docs-feature-box">
+            <div class="docs-feature-head">&#127760; Raw Socket Fetch</div>
+            <code class="docs-code">np::fetch(url, "GET");</code>
+            <p class="docs-feature-text">Zero-dependency TCP socket client with DNS resolution.</p>
+          </div>
+        </div>
+
+        <div class="docs-footer">
+          <a href="https://nova-documentation.vercel.app/" target="_blank" rel="noopener noreferrer" class="docs-cta-btn">
+            <span>Open Full Hosted Docs &#8599;</span>
+          </a>
+          <span class="docs-footer-note">Hosted live on Vercel</span>
+        </div>
+      </div>
+    )";
+  }
+};
+
+static DocsComponent s_docs;
+
+void renderDocsPage(np::NovaBuilder &np) {
+  np << R"(<div class="bento-grid">)";
+  np.renderComponent(s_nav);
+  np.renderComponent(s_docs);
   np << R"(</div>)";
 }
 

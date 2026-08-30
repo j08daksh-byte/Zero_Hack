@@ -10,6 +10,7 @@
 
   <p align="center">
     <a href="https://zerodepshack.com"><img src="https://img.shields.io/badge/Hackathon-Zero_Dependency_2026-6366f1?style=for-the-badge&logo=codeforces&logoColor=white" alt="Hackathon"></a>
+    <a href="https://nova-documentation.vercel.app/"><img src="https://img.shields.io/badge/Live_Docs-nova--documentation-10b981?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Docs"></a>
     <a href="#"><img src="https://img.shields.io/badge/Track_C-Web_%26_Network-8b5cf6?style=for-the-badge&logo=serverfault&logoColor=white" alt="Track C"></a>
     <a href="STDLIB.md"><img src="https://img.shields.io/badge/Dependencies-0.00_ZERO-10b981?style=for-the-badge&logo=shield&logoColor=white" alt="Zero Dependencies"></a>
     <a href="#"><img src="https://img.shields.io/badge/Startup-<1ms_(0.8ms)-f59e0b?style=for-the-badge&logo=speedtest&logoColor=white" alt="Startup Time"></a>

@@ -1,5 +1,17 @@
 // NovaCPP Client Bridge
 
+function updateActiveNav(path) {
+  const current = path || window.location.pathname || '/';
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === current || (current === '' && href === '/')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
 function setupPolling() {
   document.querySelectorAll('[nova-poll]').forEach(el => {
     const interval = parseInt(el.getAttribute('nova-poll'));
@@ -36,14 +48,22 @@ async function navigateTo(path) {
     if (res.ok) {
       document.getElementById('root').innerHTML = await res.text();
       setupPolling();
+      updateActiveNav(path);
     }
   } catch (err) {
     console.error('[NovaCPP] Navigation error:', err);
   }
 }
 
-window.addEventListener('DOMContentLoaded', setupPolling);
-window.addEventListener('popstate', () => navigateTo(window.location.pathname));
+window.addEventListener('DOMContentLoaded', () => {
+  setupPolling();
+  updateActiveNav();
+});
+
+window.addEventListener('popstate', () => {
+  navigateTo(window.location.pathname);
+  updateActiveNav(window.location.pathname);
+});
 
 document.addEventListener('click', async (e) => {
   const link = e.target.closest('[nova-link]');
@@ -77,6 +97,7 @@ document.addEventListener('click', async (e) => {
           document.getElementById('root').innerHTML = html;
         }
         setupPolling();
+        updateActiveNav();
       }
     } catch (err) {
       console.error('[NovaCPP] Action error:', err);
